@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <style>
+      #banner {
+        height: 360px;
+        width: 100%;
+        object-fit: contain;
+      }
+    </style>
+    <title>Hartley Express Logistics</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center mt-2 mb-4">Hartley Express Logistics</h1>
+      <img class="img-fluid" id="banner" src="../static/banner.jpg" />
+      <h2 class="text-center mt-2 mb-4">Who Are We</h2>
+      <p class="lead">
+        Midrand Transportation Services is your trusted logistics partner,
+        offering staff transportation, funeral home car rental, and trip
+        bookings. Our tailored staff transportation solutions cater to your
+        business's unique needs, ensuring a seamless and safe commute for your
+        staff. During times of mourning, our compassionate funeral home car
+        rental services provide dignified and respectful transportation for your
+        loved ones, with a dedicated team to assist you with empathy and care.
+        Whether it's a business trip or a family vacation, we make your journey
+        comfortable and hassle-free with a diverse fleet, including sedans,
+        SUVs, and vans, and a user-friendly booking platform. Count on us for
+        reliability, safety, affordability, and years of experience in providing
+        tailored transportation solutions. Contact Midrand Transportation
+        Services today for peace of mind and quality service.
+      </p>
+
+      <h2 class="text-center mt-2 mb-4">Open Positions</h2>
+      <div>{% for job in jobs %} {% include 'jobinfo.html' %} {% endfor %}</div>
+      <div class="text-center">
+        <button class="btn btn-primary btn-lg">Contact Us</button>
+        <p class="mt-4">Copyright 2023 HEL</p>
+      </div>
+    </div>
+  </body>
+</html>
