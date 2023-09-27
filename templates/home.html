@@ -14,37 +14,52 @@
         height: 360px;
         width: 100%;
         object-fit: contain;
+        margin-bottom: 16px;
       }
     </style>
     <title>Hartley Express Logistics</title>
   </head>
   <body>
+    {% include 'nav.html' %}
+    <img class="img-fluid" id="banner" src="../static/logo.png" />
     <div class="container">
-      <h1 class="text-center mt-2 mb-4">Hartley Express Logistics</h1>
-      <img class="img-fluid" id="banner" src="../static/banner.jpg" />
-      <h2 class="text-center mt-2 mb-4">Who Are We</h2>
-      <p class="lead">
-        Midrand Transportation Services is your trusted logistics partner,
-        offering staff transportation, funeral home car rental, and trip
-        bookings. Our tailored staff transportation solutions cater to your
-        business's unique needs, ensuring a seamless and safe commute for your
-        staff. During times of mourning, our compassionate funeral home car
-        rental services provide dignified and respectful transportation for your
-        loved ones, with a dedicated team to assist you with empathy and care.
-        Whether it's a business trip or a family vacation, we make your journey
-        comfortable and hassle-free with a diverse fleet, including sedans,
-        SUVs, and vans, and a user-friendly booking platform. Count on us for
-        reliability, safety, affordability, and years of experience in providing
-        tailored transportation solutions. Contact Midrand Transportation
-        Services today for peace of mind and quality service.
-      </p>
-
-      <h2 class="text-center mt-2 mb-4">Open Positions</h2>
+      <h1 class="text-center mt-2 mb-4">inTransi - School Transport Finder</h1>
+      <div class="row" style="margin-bottom: 16px">
+        <div class="col-md-6">
+          <p class="lead">
+            InTransi, your dependable partner, ensures your child's secure
+            school commute. We specialize in linking parents with trustworthy
+            school transportation solutions, placing safety and peace of mind at
+            the forefront. Aligned with the prestigious Midrand Learner
+            Transport Association (MLTA) fleet, we guarantee a safe and
+            comfortable journey for your child. Backed by MLTA's seasoned
+            partners, we're dedicated to achieving excellence in school
+            transportation. Your child's safety and comfort are our paramount
+            concerns. Simplify your daily routine by effortlessly discovering
+            the ideal transportation solution with a single click. Count on
+            inTransi to make your child's commute stress-free and your life more
+            convenient.
+          </p>
+        </div>
+        <div class="d-none d-md-block col-md-6">
+          <img
+            src="/static/transi.jpg"
+            style="height: 320px; border-radius: 4px"
+          />
+        </div>
+      </div>
+      <h2 class="text-center mt-2 mb-4" style="margin-top: 10px">
+        Open Positions
+      </h2>
       <div>{% for job in jobs %} {% include 'jobinfo.html' %} {% endfor %}</div>
       <div class="text-center">
-        <button class="btn btn-primary btn-lg">Contact Us</button>
-        <p class="mt-4">Copyright 2023 HEL</p>
+        <a
+          href="mailto:lesegohartley@gmail.com?subject=Question%20About%20Job%20Openings&body=%3CEnter%20your%20query%20here%3E"
+          class="btn btn-primary btn-lg"
+          >Contact Us</a
+        >
       </div>
     </div>
+    {% include 'footer.html' %}
   </body>
 </html>
