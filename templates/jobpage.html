@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% for info in job %}
+  <head>
+    {% include 'bootstrap.html' %}
+    <title>{{info.title}} - InTransi Careers</title>
+  </head>
+  <body>
+    {% include 'nav.html' %} {% include 'banner.html' %}
+    <div class="container">
+      <h1 class="text-center mt-2 mb-4">inTransi Careers</h1>
+      <h3 class="mb-0">{{info.title}}</h3>
+      <p class="lead mt-0">{{info.location}}</p>
+      <h4>Responsiblities</h4>
+      <ul>
+        {% for line in info.responsibilities.split(".") %}
+        <li>{{line}}</li>
+        {% endfor %}
+      </ul>
+      <h4>Requirements</h4>
+      <ul>
+        {% for req in info.requirements.split(".") %}
+        <li>{{req}}</li>
+        {% endfor %}
+      </ul>
+      <h4>Salary</h4>
+      <p>{{info.currency}} {{info.salary}}</p>
+      <a
+        href="mailto:lesegohartley@gmail.com?subject=Application%20for%20{{job['title']}}&body=My%20name%3A%20%3Cyour%20name%20here%3E%0D%0AMy%20portfolio%3A%20%3Cyour%20github%20portfolio%20link%20here%3E%0D%0AMy%20linkedIn%3A%20%3Cyour%20linkedIn%20profile%20link%20here%3E"
+        type="button"
+        class="btn btn-outline-primary"
+        >Apply</a
+      >
+    </div>
+    {% include 'footer.html' %}
+  </body>
+  {% endfor %}
+</html>
